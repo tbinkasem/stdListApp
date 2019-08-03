@@ -1,14 +1,25 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>
-      Ionic Blank
+      List Student
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+    <ion-card ion-item *ngFor="let st of students">
+      <img src="../../assets/imgs/{{ st.photo }}">
+      <ion-card-header color="primary">
+        ID: {{ st.idstd }} <br>
+        -------------------------------
+      </ion-card-header>
+      <ion-card-content color="danger">
+        UserName: {{ st.usr }} <br>
+        Password: {{ st.pwd }} <br>
+        Mobile: {{ st.Telephone }} <br>
+        Email: {{ st.Email }}
+      </ion-card-content>
+    </ion-card>
+  
 </ion-content>
